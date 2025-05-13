@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/tela_home.dart'; // Agora sim contém HomeScreen
 
 void main() {
   runApp(const IMCApp());
@@ -12,7 +12,10 @@ class IMCApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Calculadora de IMC',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+      ),
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
