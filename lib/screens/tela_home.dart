@@ -14,7 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final ControllerHome  _controller = ControllerHome();
 
   void _onResultadoPronto() {
-    setState(() {}); // Atualiza os dados na tela inicial
+    setState(() {}); 
 
     Navigator.push(
       context,

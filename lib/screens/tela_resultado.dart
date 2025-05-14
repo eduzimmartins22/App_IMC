@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../controlers/controler_result.dart';   // ajuste o caminho se necessário
+import '../controlers/controler_result.dart';   
 
 class ResultScreen extends StatelessWidget {
   ResultScreen({super.key, required double imc})
