@@ -1,16 +1,45 @@
-# teste
+# Calculadora de IMC
 
-A new Flutter project.
+Um aplicativo Flutter para cálculo do Índice de Massa Corporal (IMC) com classificação automática.
 
-## Getting Started
+## Matrícula dos Componentes da Dupla
+- Eduardo Martins Cardoso
+- Breno Tonini Costa
 
-This project is a starting point for a Flutter application.
+## Capturas de Tela do Aplicativo
 
-A few resources to get you started if this is your first Flutter project:
+| Tela Inicial | Resultado - Abaixo do Peso | Resultado - Normal |
+|--------------|----------------------------|--------------------|
+| <img src="assets/screenshots/screenshot_telainicial_imc.png" width="200"> | <img src="assets/screenshots/resultado_abaixo.png" width="200"> | <img src="assets/screenshots/resultado_normal.png" width="200"> |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Resultado - Sobrepeso | Resultado - Obesidade Grau 1 | Resultado - Obesidade Grau 2 |
+|-----------------------|------------------------------|------------------------------|
+| <img src="assets/screenshots/resultado_sobrepeso.png" width="200"> | <img src="assets/screenshots/resultado_obesidade1.png" width="200"> | <img src="assets/screenshots/resultado_obesidade2.png" width="200"> |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Resultado - Obesidade Grau 3 |
+|------------------------------|
+| <img src="assets/screenshots/resultado_obesidade3.png" width="200"> |
+
+## Recursos
+- Campos para inserção de altura (metros) e peso (kg)
+- Cálculo automático do IMC ao pressionar o botão
+- Classificação do resultado (Abaixo do peso, Normal, Sobrepeso, etc.)
+
+## Tecnologias Utilizadas
+- Flutter (Framework de UI)
+- Dart (Linguagem de Programação)
+- Material Design (Interface Moderna)
+
+## Como Usar
+- Insira sua altura em metros (ex: 1.75)
+- Insira seu peso em quilogramas (ex: 65)
+- Clique no botão "Calcular IMC"
+- Veja seu resultado e classificação
+
+## Contribuição
+
+Projeto acadêmico não aberto para contribuições externas. No entanto, sinta-se à vontade para clonar o repositório e realizar modificações para aprendizado pessoal.
+
+---
+
+Desenvolvido como parte da disciplina **Aplicativos Mobile - Faculdade UCL**.
