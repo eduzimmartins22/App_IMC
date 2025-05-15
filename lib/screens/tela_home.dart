@@ -41,22 +41,44 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const FlutterLogo(size: 120),
             const SizedBox(height: 24),
-            TextField(
-              controller: _controller.alturaController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                labelText: 'Altura (m)',
-                border: OutlineInputBorder(),
-              ),
+            ValueListenableBuilder<String?>(
+              valueListenable: _controller.alturaError,
+              builder: (context, error, _) {
+                return TextField(
+                  controller: _controller.alturaController,
+                  keyboardType: TextInputType.numberWithOptions(decimal: true),
+                  decoration: InputDecoration(
+                    labelText: 'Altura (m)',
+                    border: const OutlineInputBorder(),
+                    errorText: error,
+                    hintText: 'Ex: 1.75',
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                  ),
+                  onChanged: (_) {
+                    _controller.alturaError.value = null;
+                  },
+                );
+              },
             ),
             const SizedBox(height: 16),
-            TextField(
-              controller: _controller.pesoController,
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                labelText: 'Peso (kg)',
-                border: OutlineInputBorder(),
-              ),
+            ValueListenableBuilder<String?>(
+              valueListenable: _controller.pesoError,
+              builder: (context, error, _) {
+                return TextField(
+                  controller: _controller.pesoController,
+                  keyboardType: TextInputType.numberWithOptions(decimal: true),
+                  decoration: InputDecoration(
+                    labelText: 'Peso (kg)',
+                    border: const OutlineInputBorder(),
+                    errorText: error,
+                    hintText: 'Ex: 65',
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                  ),
+                  onChanged: (_) {
+                    _controller.pesoError.value = null;
+                  },
+                );
+              },
             ),
             const SizedBox(height: 24),
             ElevatedButton(
@@ -76,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     children: [
                       Text(
-                        'Resultado na tela inicial:',
+                        'Resultado anterior:',
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
